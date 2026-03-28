@@ -1,0 +1,9 @@
+{
+	"name": "nyc-cars-project",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "237e2647-285e-423d-a8f1-f9bfc03a797d",
+		"tenantId": "66000125-b40a-4837-a4f7-fa53b888148f"
+	}
+}

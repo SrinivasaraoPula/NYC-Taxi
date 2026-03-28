@@ -1,0 +1,21 @@
+{
+	"name": "ds_sink_bronze",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_sink_bronze",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "tripdetails2026",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
