@@ -1,0 +1,28 @@
+{
+	"name": "ds_htttp_greater10",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_http_source_nyc",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"relativepath": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "trip-data/green_tripdata_2025-@{dataset().relativepath}.parquet",
+					"type": "Expression"
+				}
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
